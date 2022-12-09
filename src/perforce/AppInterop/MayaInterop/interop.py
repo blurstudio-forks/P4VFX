@@ -129,7 +129,10 @@ class MayaInterop(BaseInterop):
 
     @staticmethod
     def getIconPath():
-        return os.environ['MAYA_APP_DIR'] + "/scripts/Perforce/images/"
+        cwd = os.path.join(
+            os.path.dirname(__file__), '..', '..', "images"
+        )
+        return os.path.realpath(cwd)
     
     @staticmethod
     def getSceneFiles():

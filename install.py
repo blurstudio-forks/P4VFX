@@ -336,11 +336,13 @@ def setup():
                 sys.exit(1)
 
 def install():
-    apps = [ 
-                Maya(),
+    apps = [
+                # NOTE: to enable legacy install of Maya, un-comment the next line
+                # Maya(),
                 Nuke(),
                 # Katana(), #This is broken atm
-                Houdini()
+                # NOTE: to enable legacy install of Houdini, un-comment the next line
+                # Houdini()
             ]
     for app in apps:
         msg = '-'*25 + ' Setting up Perforce for %s' % (type(app).__name__) + '-'*25
