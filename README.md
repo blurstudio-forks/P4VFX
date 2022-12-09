@@ -32,7 +32,7 @@ The maya integration is done with a Maya module instead of installing into the u
 
 Add the path to the repository root(folder containing [P4Maya.mod](P4Maya.mod)) to the environment variable `MAYA_MODULE_PATH`.
 
-Note, this module is only valid for python 2 versions of Maya.
+Note, this module is only valid for python 2 versions of Maya.  It also forces QtPy to use PySide2 even if PyQt5 is installed for Maya. This can be disabled by removing the `P4Maya-blur` section in [P4Maya.mod](P4Maya.mod).
 
 ### Installing for Houdini
 
